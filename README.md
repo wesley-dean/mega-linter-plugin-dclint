@@ -16,6 +16,9 @@ MegaLinter plugin for
 [docker-compose-lint](https://github.com/zavoloklom/docker-compose-linter) by
 [zavoloklom](https://github.com/zavoloklom/).
 
+The docker-compose-linter (`dclint`) tool is a linter for Docker Compose files.
+It checks for common errors and best practices in Docker Compose files.
+
 ## Usage
 
 To use this plugin, you need to have MegaLinter installed. Please refer to the
@@ -27,15 +30,18 @@ installation instructions.
 To use this plugin, add the following to your MegaLinter configuration:
 
 ```yaml
-ENABLE_LINTERS:
-  - "dclint"
-```
-
-and
-
-```yaml
 PLUGINS:
   - "https://raw.githubusercontent.com/wesley-dean/mega-linter-plugin-dclint/refs/heads/main/mega-linter-plugin-dclint/dclint.megalinter-descriptor.yml
+```
+
+Simply adding the plugin to the `PLUGINS` section will cause MegaLiner to read
+the descriptor and make it available for use.  However, depending on your
+MegaLinter configuration, you may need to enable the linter in the `ENABLE_LINTERS`
+section as well.  For example:
+
+```yaml
+ENABLE_LINTERS:
+  - "dclint"
 ```
 
 ### Docker-Compose-Lint Configuration
