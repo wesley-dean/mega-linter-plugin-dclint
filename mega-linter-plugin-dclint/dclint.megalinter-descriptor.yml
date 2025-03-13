@@ -1,0 +1,30 @@
+---
+descriptor_id: "DCLINT"
+descriptor_type: "tooling_format"
+descriptor_flavors:
+  - "all_flavors"
+  - "ci_light"
+  - "security"
+  - "terraform"
+file_names_regex:
+  - "docker-compose(-.+)?\\.ya?ml"
+linters:
+  - linter_name: dclint
+    name: DOCKERFILE_DCLINT
+    cli_lint_extra_args:
+      - "--no-color"
+    linter_repo: "https://github.com/wesley-dean/mega-linter-plugin-dclint"
+    linter_url: "https://github.com/wesley-dean/mega-linter-plugin-dclint"
+    cli_config_arg_name: "--config"
+    config_file_name: ".dclintrc"
+    cli_help_arg_name: "--help"
+    cli_version_arg_name: "--version"
+    cli_lint_fix_arg_name: "--fix"
+    cli_lint_errors_regex: "[^0-9]*[0-9]+\\s*problems?\\s*[(]([0-9]*)\\s*errors?\\s*,\\s*([0-9]*)\\s*warnings?[)]"
+    cli_lint_mode: "list_of_files"
+    examples:
+      - "dclint docker-compose.yml"
+      - "dclint --config .dclintrc ."
+    install:
+      dockerfile:
+        - "RUN npm install -g dclint"
