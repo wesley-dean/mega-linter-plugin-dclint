@@ -27,7 +27,8 @@ installation instructions.
 To use this plugin, add the following to your MegaLinter configuration:
 
 ```yaml
-ENABLE_LINTERS: "dclint"
+ENABLE_LINTERS:
+  - "dclint"
 ```
 
 and
