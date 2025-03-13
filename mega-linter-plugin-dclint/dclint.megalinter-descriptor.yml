@@ -22,6 +22,9 @@ linters:
     cli_lint_fix_arg_name: "--fix"
     cli_lint_errors_regex: "[^0-9]*[0-9]+\\s*problems?\\s*[(]([0-9]*)\\s*errors?\\s*,\\s*([0-9]*)\\s*warnings?[)]"
     cli_lint_mode: "list_of_files"
+    linter_rules_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/rules.md"
+    linter_rules_inline_disable_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/configuration-comments.md#disabling-rules"
+    version_extract_string: '\\d*'
     examples:
       - "dclint docker-compose.yml"
       - "dclint --config .dclintrc ."
