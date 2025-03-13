@@ -1,0 +1,4 @@
+---
+services:
+  image: busybox:latest
+  name: bad
