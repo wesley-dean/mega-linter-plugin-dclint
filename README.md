@@ -1,5 +1,10 @@
 # mega-linter-plugin-dclint
 
+[![MegaLinter](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/megalinter.yml/badge.svg)](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/megalinter.yml)
+[![Dependabot Updates](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/dependabot/dependabot-updates)
+
+
+
 This is a MegaLinter plugin for docker-compose-lint (dclint)
 
 ## Introduction
