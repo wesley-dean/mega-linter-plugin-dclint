@@ -1,3 +1,4 @@
+---
 # For most projects, this workflow file will not need changing; you simply need
 # to commit it to your repository.
 #
@@ -11,6 +12,7 @@
 #
 name: "CodeQL Advanced"
 
+# yamllint disable-line rule:truthy
 on:
   push:
     branches: ["main"]
