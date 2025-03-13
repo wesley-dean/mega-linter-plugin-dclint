@@ -1,0 +1,7 @@
+venv
+*~
+networks/*.yml
+.env
+megalinter-reports
+reports
+__pycache__
