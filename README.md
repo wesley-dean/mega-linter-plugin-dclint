@@ -2,7 +2,7 @@
 
 [![MegaLinter](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/megalinter.yml/badge.svg)](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/megalinter.yml)
 [![Dependabot Updates](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/dependabot/dependabot-updates)
-
+[![Scorecard supply-chain security](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/scorecard.yml/badge.svg)](https://github.com/wesley-dean/mega-linter-plugin-dclint/actions/workflows/scorecard.yml)
 
 
 This is a MegaLinter plugin for docker-compose-lint (dclint)
