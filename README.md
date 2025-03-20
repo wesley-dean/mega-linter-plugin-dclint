@@ -41,7 +41,7 @@ section as well.  For example:
 
 ```yaml
 ENABLE_LINTERS:
-  - "dclint"
+  - "DOCKERFILE_DCLINT"
 ```
 
 ### Docker-Compose-Lint Configuration

@@ -24,7 +24,8 @@ linters:
     cli_lint_mode: "list_of_files"
     linter_rules_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/rules.md"
     linter_rules_inline_disable_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/configuration-comments.md#disabling-rules"
-    version_extract_string: '\\d*'
+    linter_icon_png_url: "https://raw.githubusercontent.com/oxsecurity/megalinter/main/docs/assets/icons/dockerfile.ico"
+    version_extract_regex: '\\d*'
     examples:
       - "dclint docker-compose.yml"
       - "dclint --config .dclintrc ."
