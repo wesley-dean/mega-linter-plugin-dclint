@@ -1,5 +1,5 @@
 ---
-descriptor_id: "DCLINT"
+descriptor_id: "DOCKERFILE"
 descriptor_type: "tooling_format"
 descriptor_flavors:
   - "all_flavors"
