@@ -20,13 +20,13 @@ services:
       - TEST=${TEST}
     env_file: ./envs/.env.a-service
     ports:
-      - "127.0.0.1:3001"
-      - "127.0.0.1:11032:3000"
-      - "127.0.0.1:11150:3000"
+      - '127.0.0.1:3001'
+      - '127.0.0.1:11032:3000'
+      - '127.0.0.1:11150:3000'
     #    command: sh -c "npm run start"
     command: sh -c "tail -f /dev/null"
     expose:
-      - "3000"
+      - '3000'
   b-service:
     build:
       context: ../../app/b-service
@@ -44,7 +44,7 @@ services:
       - data:/var/www/app/node_modules
     env_file: ./envs/.env.b-service
     ports:
-      - "127.0.0.1:11131:3000"
+      - '127.0.0.1:11131:3000'
     command: sh -c "npm run start"
   c-service:
     build:
