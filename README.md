@@ -49,3 +49,15 @@ ENABLE_LINTERS:
 To configure docker-compose-lint, you can create a `.dclintrc` file in the
 root of your repository. For more information on configuring, refer to the
 [docker-compose-lint documentation](https://github.com/zavoloklom/docker-compose-linter/blob/main/README.md)
+
+
+### Passing Options to dclint
+
+If you want to pass command line arguments along to the docker-compose linter,
+pass a string with the arguments using the `DOCKERFILE_DCLINT_ARGUMENTS`
+variable.
+
+```YAML
+# append `--fix` to the end of the `dclint` command
+DOCKERFILE_DCLINT_ARGUMENTS: "--fix"
+```
