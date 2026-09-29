@@ -7,31 +7,33 @@ descriptor_flavors:
   - "security"
   - "terraform"
 file_names_regex:
-  - "docker-compose(-.+)?\\.ya?ml"
+  - "^(docker-)?compose.*\\.ya?ml$"
 linters:
-  - linter_name: dclint
-    name: DOCKERFILE_DCLINT
+  - linter_name: "dclint"
+    name: "DOCKERFILE_DCLINT"
     cli_lint_extra_args:
       - "--no-color"
-    linter_repo: "https://github.com/wesley-dean/mega-linter-plugin-dclint"
-    linter_url: "https://github.com/wesley-dean/mega-linter-plugin-dclint"
+    linter_repo: "https://github.com/zavoloklom/docker-compose-linter"
+    linter_url: "https://github.com/zavoloklom/docker-compose-linter"
     cli_config_arg_name: "--config"
     config_file_name: ".dclintrc"
     cli_help_arg_name: "--help"
     cli_version_arg_name: "--version"
     cli_lint_fix_arg_name: "--fix"
-    cli_lint_errors_count: regex_number
+    cli_lint_errors_count: "regex_number"
     cli_lint_errors_regex: "[^0-9]*[0-9]+\\s*problems?\\s*\\(([0-9]*)\\s*errors?\\s*,\\s*[0-9]*\\s*warnings?\\)"
-    cli_lint_warnings_count: regex_number
+    cli_lint_warnings_count: "regex_number"
     cli_lint_warnings_regex: "[^0-9]*[0-9]+\\s*problems?\\s*\\([0-9]*\\s*errors?\\s*,\\s*([0-9]*)\\s*warnings?\\)"
     cli_lint_mode: "list_of_files"
-    linter_rules_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/rules.md"
-    linter_rules_inline_disable_url: "https://github.com/zavoloklom/docker-compose-linter/blob/main/docs/configuration-comments.md#disabling-rules"
-    linter_icon_png_url: "https://raw.githubusercontent.com/oxsecurity/megalinter/main/docs/assets/icons/dockerfile.ico"
-    version_extract_regex: '\d+(\.\d+)+'
+    supported_cli_lint_modes:
+      - "list_of_files"
+    linter_rules_url: "https://github.com/zavoloklom/docker-compose-linter/blob/472be0872d03fbcb9d3b53b9c69eba00aeabb9af/docs/rules.md"
+    linter_rules_inline_disable_url: "https://github.com/zavoloklom/docker-compose-linter/blob/472be0872d03fbcb9d3b53b9c69eba00aeabb9af/docs/configuration-comments.md#disabling-rules"
+    linter_icon_png_url: "https://raw.githubusercontent.com/oxsecurity/megalinter/v10.1.0/docs/assets/icons/dockerfile.ico"
+    version_extract_regex: "\\d+(?:\\.\\d+){2}"
     examples:
       - "dclint docker-compose.yml"
-      - "dclint --config .dclintrc ."
+      - "dclint --config .dclintrc compose/docker-compose-service.yml"
     install:
       dockerfile:
-        - "RUN npm install -g dclint"
+        - "RUN npm install --global dclint@3.1.0"

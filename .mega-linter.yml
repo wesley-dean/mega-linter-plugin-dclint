@@ -1,6 +1,6 @@
 ---
 # don't test the reports Mega-Linter created, docs, or test files
-ADDITIONAL_EXCLUDED_DIRECTORIES: [report, megalinter-reports]
+ADDITIONAL_EXCLUDED_DIRECTORIES: [dist, report, megalinter-reports, test-results, doc/standards, tests]
 
 # don't scan files listed in .gitignore (e.g., node_modules)
 IGNORE_GITIGNORED_FILES: true
@@ -24,14 +24,14 @@ PRINT_ALPACA: false
 # write a SARIF file
 SARIF_REPORTER: true
 
+# Validation is read-only; do not request PR-comment write permissions.
+GITHUB_COMMENT_REPORTER: false
+
 # don't fail on finding (yet)
 DISABLE_ERRORS: true
 
 # use prettier for JavaScript code formatting
 JAVASCRIPT_DEFAULT_STYLE: prettier
-
-# only scan the files in This commit, not the entire history of the repo
-REPOSITORY_GITLEAKS_ARGUMENTS: --no-git
 
 # don't lint the generated code in the docs/ directory
 REPOSITORY_DEVSKIM_ARGUMENTS: "--skip-git-ignored-files"

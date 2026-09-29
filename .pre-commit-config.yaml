@@ -33,7 +33,7 @@ repos:
         name: Detect hardcoded secrets
         description: Detect hardcoded secrets using Gitleaks
         language: docker_image
-        entry: zricethezav/gitleaks:v8.15.0 protect --verbose --redact --staged
+        entry: zricethezav/gitleaks:v8.23.1 protect --verbose --redact --staged
 
   # fail if a commit includes a file named '.env'
   # BAD:
