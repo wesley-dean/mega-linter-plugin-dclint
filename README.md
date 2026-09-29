@@ -61,3 +61,16 @@ variable.
 # append `--fix` to the end of the `dclint` command
 DOCKERFILE_DCLINT_ARGUMENTS: "--fix"
 ```
+
+## Repository Governance
+
+This repository adopts released engineering standards from
+[`wesley-dean/coding_standards`](https://github.com/wesley-dean/coding_standards).
+The complete pinned snapshot is committed beneath `doc/standards/`, while
+`.codingstandardrc` records the adopted release and verified archive digest.
+
+Applicable files beneath `doc/standards/` are project requirements, subject to
+accepted repository-specific ADRs and explicit local policy. Imported standards
+are managed as a release snapshot and are not edited locally to create project-
+specific exceptions.
+
