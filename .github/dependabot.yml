@@ -12,8 +12,8 @@ updates:
     cooldown:
       default-days: 7
     groups:
-      minor-and-patch:
+      # Group eligible routine major/minor/patch version updates only.
+      actions-version-updates:
         applies-to: version-updates
-        update-types:
-          - "minor"
-          - "patch"
+        patterns:
+          - "*"
