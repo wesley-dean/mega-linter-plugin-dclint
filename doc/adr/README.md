@@ -25,9 +25,19 @@ the first release and uses `vX.Y.Z` thereafter.
 
 See [ADR-002](ADR-002-publish-versioned-descriptor-release-assets.md).
 
+### ADR-004: Migrate Routine Dependency Updates to Central Renovate
+
+The repository enrolls in centrally managed Jenkins Renovate through
+`renovate.json`, disables scheduled routine Dependabot PRs, and preserves
+independent security responses and required review gates. This decision
+partially supersedes the earlier Dependabot maintenance ADR.
+
+See [ADR-004](ADR-004-migrate-routine-dependency-updates-to-renovate.md).
+
 <!-- adrctl-generated-footer -->
 
 ## Architecture Decision Records
 
 * [ADR-001: Pin the Reviewed DCLint 3.1.0 Integration](ADR-001-pin-reviewed-dclint-3.1.0-integration.md)
 * [ADR-002: Publish Versioned DCLint Descriptor Release Assets](ADR-002-publish-versioned-descriptor-release-assets.md)
+* [ADR-004: Migrate Routine Dependency Updates to Central Renovate](ADR-004-migrate-routine-dependency-updates-to-renovate.md)
